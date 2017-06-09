@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ribbon-server    #应用名称为ribbon-server
+
+server:
+  port: 8090          #配置端口号8090
