@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ribbon-client
+
+server:
+  port: 8888
+
+myService:             #不采用Eureka方式，官网提供这中自定义前缀的方式设置myServer为自定义前缀
+  ribbon:
+    eureka:
+      enabled: false   #不采用Eureka注册
+    listOfServers: localhost:8090,localhost:9999    #服务列表，要调用的服务，上面已经启动的两个节点
+    ServerListRefreshInterval: 15000    #服务列表刷新时间
